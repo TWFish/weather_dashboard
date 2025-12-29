@@ -3,7 +3,7 @@ import streamlit as st
 import google.generativeai as genai
 import pandas as pd
 
-genai.configure(api_key="AIzaSyDa9xuiVaILWkt_LSLkQXr3ZsYnTaljiEY")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 model = genai.GenerativeModel('gemini-pro')
 
 st.title("台灣氣象與 AI 穿搭推薦")
