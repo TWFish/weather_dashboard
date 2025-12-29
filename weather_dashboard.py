@@ -4,7 +4,7 @@ import google.generativeai as genai
 import pandas as pd
 
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 st.title("台灣氣象與 AI 穿搭推薦")
 LOCATION = st.selectbox("選擇城市", ["臺北","臺中","高雄"])
