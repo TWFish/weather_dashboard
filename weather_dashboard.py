@@ -9,7 +9,7 @@ model = genai.GenerativeModel('gemini-3-flash-preview')
 st.title("台灣氣象與 AI 穿搭推薦")
 LOCATION = st.selectbox("選擇城市", ["臺北","臺中","高雄"])
 
-ulr = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-EE0FA5AF-16E7-4E77-80A0-97172349E1A5'
+url = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-EE0FA5AF-16E7-4E77-80A0-97172349E1A5'
 
 data = requests.get(url, verify=False).json()
 all_locations = data['records']['location']
